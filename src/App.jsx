@@ -3,13 +3,15 @@ import "./App.css";
 import useFetch from "./hooks/useFetch";
 import Formulario from "./components/Formulario";
 import UserCard from "./components/UserCard";
+import { URL_API } from "../url";
 
 function App() {
   const [updateInfo, setUpdateInfo] = useState()
-  
+
+  const urlUser = URL_API.url
 
   // const baseUrl = 'https://users-crud.academlo.tech/'
-  const baseUrl = 'https://user-crud-mario.onrender.com/api/v1'
+  const baseUrl = `${urlUser}`
 
   const [users, 
     getAllUser, 
